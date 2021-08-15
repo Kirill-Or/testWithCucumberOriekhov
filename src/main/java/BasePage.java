@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    private WebDriver driver;
+    private WebDriver driver ;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -34,4 +34,10 @@ public class BasePage {
         webDriverWait.until(ExpectedConditions.textToBePresentInElementLocated(locator,text));
         return getWebElement(locator).isDisplayed();
 
-}}
+}
+public void waitFor(By locator){WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
+    webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+}
+
+}

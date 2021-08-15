@@ -6,14 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 
-    private WebDriver driver;
-
-    public WebDriver getDriver() {
+    static WebDriver driver;
+    public static WebDriver getDriver() {
         return driver;
-    }
-
-    public void setDriver(WebDriver driver) {
-        this.driver = driver;
     }
 
     @Before
