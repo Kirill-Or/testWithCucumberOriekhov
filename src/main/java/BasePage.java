@@ -1,3 +1,4 @@
+import org.apache.hc.core5.util.Asserts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,7 +38,6 @@ public class BasePage {
 }
 public void waitFor(By locator){WebDriverWait webDriverWait = new WebDriverWait (driver, 3);
     webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
 }
 
 }
